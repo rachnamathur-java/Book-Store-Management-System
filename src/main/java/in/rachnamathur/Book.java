@@ -13,7 +13,7 @@ public class Book {
     private String author;
     private Double price;
     private int availableQuantity;
-    private int purchaseQuality;
+    private int purchaseQuantity;
 
     public Book(String bookId, String title, String author, Double price, int availableQuantity) {
         this.bookId = bookId;
@@ -34,7 +34,7 @@ public class Book {
         System.out.println("Book Author : " + author);
         System.out.println("Book Price : " + price);
         System.out.println("Book Quantity : " + availableQuantity);
-        System.out.println("Book Purchase Quantity : " + purchaseQuality);
+        System.out.println("Book Purchase Quantity : " + purchaseQuantity);
     }
 
     public void availableBookDisplay() {
@@ -53,7 +53,7 @@ public class Book {
         System.out.println("Book Title : " + title);
         System.out.println("Book Author : " + author);
         System.out.println("Book Price : " + price);
-        System.out.println("Book Purchase Quantity : " + purchaseQuality);
+        System.out.println("Book Purchase Quantity : " + purchaseQuantity);
 
     }
 

@@ -58,7 +58,7 @@ public class BookService {
             if (book.getBookId().equals(bookId)) {
                 if (quantity<=book.getAvailableQuantity()) {
                     book.setAvailableQuantity(book.getAvailableQuantity() - quantity);
-                    book.setPurchaseQuality(quantity);
+                    book.setPurchaseQuantity(quantity);
                 }
                 System.out.println();
                 if (quantity>book.getAvailableQuantity()){
@@ -83,7 +83,6 @@ public class BookService {
                 System.out.println();
                 break;
             }
-
             else{
                 throw new BookNotFound("Book : "+title+" not found!");
             }
@@ -109,7 +108,7 @@ public class BookService {
     public void getInventory() {
         double total = 0.0;
         for (Book b : bookStore.getPurchaseList()) {
-            total = b.getPrice() * b.getPurchaseQuality() + total;
+            total = b.getPrice() * b.getPurchaseQuantity() + total;
         }
         System.out.println("total price : " + total);
     }
